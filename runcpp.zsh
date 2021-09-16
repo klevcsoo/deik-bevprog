@@ -1,8 +1,11 @@
 #!/bin/zsh
 set -e
+set -o localoptions -o localtraps
 
 ext=${1##*.}
 outfile=${1%%.*}
+
+trap 'rm ${outfile}' INT
 
 if [ ${ext} != "cpp" ]; then
   echo "Extension must be .cpp"
