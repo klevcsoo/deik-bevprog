@@ -8,7 +8,7 @@ outfile=${1%%.*}
 trap 'rm ${outfile}' INT
 
 if [ ${ext} != "cpp" ]; then
-  echo "Extension must be .cpp"
+  echo "script: \e[31;1merror:\e[0m Extension must be .cpp"
   exit 1
 fi
 
