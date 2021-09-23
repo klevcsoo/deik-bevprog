@@ -12,6 +12,6 @@ if [ ${ext} != "cpp" ]; then
   exit 1
 fi
 
-gcc ${1} -o ${outfile} -lstdc++
+gcc ${1} -o ${outfile} -lstdc++ -std=c++17
 ${outfile}
 rm ${outfile}
